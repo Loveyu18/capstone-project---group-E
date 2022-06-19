@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+            crossorigin="anonymous"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+            integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <title>入口網站</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            .showcase {
+                position: absolute;
+                right: 0;
+                width: 100%;
+                min-height: 100vh;
+                padding: 100px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background: #111;
+                color: #fff;
+                z-index: 2;
+            }
+
+            .showcase header {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                padding: 40px 100px;
+                z-index: 1000;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .logo {
+                text-transform: uppercase;
+                cursor: pointer;
+                width: 15%;
+            }
+            .logo-svg {
+                width: 100%;
+            }
+
+            .toggle {
+                position: relative;
+                width: 60px;
+                height: 60px;
+                background: url("./imgs/entrance/Hamburger_icon.svg");
+                background-repeat: no-repeat;
+                background-size: 30px;
+                background-position: center;
+                cursor: pointer;
+            }
+            .toggle.full {
+                background: url("./imgs/entrance/close_icon.png");
+                background-repeat: no-repeat;
+                background-size: 30px;
+                background-position: center;
+            }
+
+            .showcase video {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                opacity: 0.6;
+            }
+            .overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgb(110, 110, 100);
+                mix-blend-mode: overlay;
+            }
+
+            .text {
+                position: relative;
+                z-index: 10;
+            }
+
+            .text h2 {
+                font-size: 4em;
+                font-weight: 800;
+                line-height: 1em;
+                text-transform: uppercase;
+            }
+            .text h3 {
+                font-size: 3.5em;
+                font-weight: 700;
+                line-height: 1em;
+                text-transform: uppercase;
+            }
+            .text p {
+                font-size: 1.1em;
+                margin: 20px 0;
+                font-weight: 400;
+                max-width: 700px;
+            }
+            .text a {
+                display: inline-block;
+                font-size: 1em;
+                background: #fff;
+                padding: 10px;
+                text-decoration: none;
+                color: #111;
+                margin-top: 10px;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                transition: 0.2s;
+            }
+
+            .text a:hover {
+                letter-spacing: 6px;
+            }
+
+            .social {
+                position: absolute;
+                bottom: 20px;
+                z-index: 10;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: #111;
+
+            }
+            .social li {
+                list-style: none;
+                font-size: 4em;
+                
+            }
+            .social li a {
+                display: inline-block;
+                filter: invert(1);
+                margin-right: 20px;
+                transform: scale(0.5);
+                transition: 0.5s;
+            }
+
+            .social li a:hover {
+                transform: scale(0.6) translateY(-20px);
+            }
+
+            @
+        </style>
+    </head>
+    <body>
+        <section class="showcase">
+            <header>
+                <h2 class="logo">
+                    <img class="logo-svg" src="./imgs/main-Logo.png" alt="" />
+                </h2>
+                <div class="toggle"></div>
+            </header>
+            <video
+                src="./video/black.mp4"
+                muted
+                loop
+                autoplay
+            ></video>
+            <div class="overlay"></div>
+            <div class="text">
+                <h2>天天吸貓</h2>
+                <h3>吸貓有益身體健康</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Ratione, voluptatem doloremque tenetur possimus asperiores
+                    facilis dolorum perferendis suscipit temporibus.
+                </p>
+                <a href="#">瞭解更多</a>
+            </div>
+            <ul class="social">
+                <li><a href="#"><i class="fa-brands fa-facebook-f"></a></i></li>
+                <li><a href="#"><i class="fa-brands fa-twitter"></a></i></li>
+                <li><a href="#"><i class="fa-brands fa-instagram"></a></i></li>
+            </ul>
+        </section>
+
+        <div class="menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Home</a></li>
+            </ul>
+        </div>
+
+        <script src="./JQ/jquery-3.6.0.min.js"></script>
+        <script></script>
+    </body>
+</html>
